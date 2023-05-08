@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="837.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.daoyou4.IndexController">
+   <top>
+      <AnchorPane prefHeight="543.0" prefWidth="1032.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="588.0" fitWidth="1051.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/pingmian.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="31.0" layoutY="476.0" mnemonicParsing="false" onAction="#exit" text="退出登录" />
+            <Button layoutX="403.0" layoutY="313.0" mnemonicParsing="false" onAction="#detail" text="化学楼" />
+            <Button layoutX="423.0" layoutY="132.0" mnemonicParsing="false" onAction="#detail" text="机械楼" />
+            <Button layoutX="577.0" layoutY="262.0" mnemonicParsing="false" onAction="#detail" text="石头楼群" />
+            <Button layoutX="562.0" layoutY="385.0" mnemonicParsing="false" onAction="#detail" text="第一教学楼" />
+            <Button layoutX="577.0" layoutY="544.0" mnemonicParsing="false" onAction="#detail" text="西区南门" />
+            <Button layoutX="301.0" layoutY="544.0" mnemonicParsing="false" onAction="#detail" text="西区田径场" />
+            <Button layoutX="228.0" layoutY="328.0" mnemonicParsing="false" onAction="#detail" text="滑冰场" />
+            <Button layoutX="111.0" layoutY="177.0" mnemonicParsing="false" onAction="#detail" text="西区西门" />
+            <Button layoutX="14.0" layoutY="45.0" mnemonicParsing="false" onAction="#detail" text="第二食堂" />
+            <Button layoutX="657.0" layoutY="207.0" mnemonicParsing="false" onAction="#detail" text="芯园" />
+            <Button layoutX="809.0" layoutY="200.0" mnemonicParsing="false" onAction="#detail" text="西区图书馆" />
+            <Button layoutX="787.0" layoutY="68.0" mnemonicParsing="false" onAction="#detail" text="研究生公寓" />
+            <Button layoutX="904.0" layoutY="430.0" mnemonicParsing="false" onAction="#detail" text="校医院" />
+            <Button layoutX="764.0" layoutY="313.0" mnemonicParsing="false" onAction="#detail" text="计算机楼" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <Pane prefHeight="247.0" prefWidth="910.0" BorderPane.alignment="CENTER">
+         <children>
+            <ButtonBar layoutX="-7.0" layoutY="4.0" prefHeight="30.0" prefWidth="190.0">
+              <buttons>
+                  <Button mnemonicParsing="false" onAction="#allPath" text="所有路径" />
+                <Button mnemonicParsing="false" onAction="#shortestPath" text="最短路径" />
+              </buttons>
+            </ButtonBar>
+            <ButtonBar layoutY="209.0" prefHeight="21.0" prefWidth="190.0">
+               <buttons>
+                  <Button disable="true" mnemonicParsing="false" onAction="#deletePath" text="删除路径" visible="false" />
+                  <Button disable="true" mnemonicParsing="false" onAction="#savePath" text="保存修改" visible="false" />
+               </buttons>
+            </ButtonBar>
+            <Label fx:id="error" layoutX="5.0" layoutY="145.0" prefHeight="27.0" prefWidth="181.0" text="简介" textFill="RED" visible="false" />
+            <Label layoutX="19.0" layoutY="43.0" text="起点" />
+            <Label layoutX="19.0" layoutY="71.0" prefHeight="36.0" prefWidth="142.0" text="终点" />
+            <Label layoutX="21.0" layoutY="112.0" text="距离/米">
+               <graphic>
+                  <TextField fx:id="length" layoutX="2.0" layoutY="4.0" prefHeight="30.0" prefWidth="83.0" />
+               </graphic>
+            </Label>
+            <TextField fx:id="add1" layoutX="58.0" layoutY="38.0" prefHeight="30.0" prefWidth="117.0" />
+            <TextField fx:id="add2" layoutX="58.0" layoutY="74.0" prefHeight="30.0" prefWidth="117.0" />
+            <ImageView fx:id="image" fitHeight="223.0" fitWidth="348.0" layoutX="679.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/石头楼群.png" />
+               </image>
+            </ImageView>
+            <ButtonBar layoutY="172.0" prefHeight="21.0" prefWidth="190.0">
+               <buttons>
+                  <Button mnemonicParsing="false" onAction="#allDetails" text="查看全部" />
+                  <Button disable="true" mnemonicParsing="false" onAction="#updatePath" text="修改路径" visible="false" />
+               </buttons>
+            </ButtonBar>
+            <TextField fx:id="introduce" alignment="TOP_RIGHT" layoutX="529.0" layoutY="2.0" prefHeight="25.0" prefWidth="498.0"/>
+            <Label fx:id="path" alignment="TOP_LEFT" layoutX="190.0" layoutY="4.0" prefHeight="239.0" prefWidth="489.0" wrapText="true" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
